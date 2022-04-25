@@ -1,5 +1,10 @@
-opcao = int(input('Op: '))
 nomesAlunos = []
+print('''   Menu
+            1- Cadastrar
+            2 - Gravar
+            3 - Sair''')
+
+opcao = int(input('Opção: '))
 
 def cadastro():
     nome = input('Nome: ')
@@ -15,4 +20,4 @@ while opcao!=3:
         cadastro()
     elif opcao==2:
         gravar()
-    opcao = int(input('Op: '))
+    opcao = int(input('Opção: '))
