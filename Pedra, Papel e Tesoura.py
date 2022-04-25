@@ -2,9 +2,6 @@ import random
 import time
 
 itens = ['Pedra', 'Papel', 'Tesoura']
-j = 0
-v = 0
-em = 0
 
 print('Olá, você está no Sistema de Diversão, agora, um sitema novo e melhorado, pronto para atendê-lo')
 
@@ -28,7 +25,6 @@ except:
     perg1 = int(input('Deseja prosseguir [1 para SIM; 2 para NÃO] '))
 
 while perg1 == 1:
-    j += 1
     for comp in range(1):
         perg2 = input('Sua escolha: ')
         perg2 = perg2.capitalize()
@@ -50,18 +46,14 @@ while perg1 == 1:
 
         elif perg2 == comp:
             print('Empate, eu escolhi', comp)
-            em += 1
         elif perg2 != itens:
             print('INVÁLIDO')
         else:
             print('Você ganhou')
-            v += 1
             print('Eu escolhi', comp)
                 
         perg1 = int(input('Deseja prosseguir [1 para SIM; 2 para NÃO] '))
 
 print('Até mais, foi um bom jogo!!')
-print('Placar final    Partidas jogadas    Partidas vencidas     Empates')
-print('XXXXXXXXXXXX         ',j,'                   ',v ,'              ', em)
 
 #Há um bug neste código e em certos momentos aparece a opção "INVÁLIDO", mesmo que tudo esteja correto
