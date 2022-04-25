@@ -86,5 +86,3 @@ while perg2 == 1:
             quit()  
         perg2 = int(input('Deseja prosseguir [1 para SIM; 2 para NÃO] '))
 print('Até mais, foi um bom jogo!!')
-print('Placar final    Partidas jogadas    Partidas vencidas     Empates')
-print('XXXXXXXXXXXX         ',j,'                   ',v ,'              ', em)
