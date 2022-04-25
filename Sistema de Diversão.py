@@ -1,7 +1,7 @@
 import random
 import time
 
-resp1 = input('Olá, bem-vind@, você faz ideia de onde está? ')
+resp1 = input('Olá, bem-vind@, você faz ideia de onde está? sim/não')
 resp1 = resp1.capitalize()
 
 if resp1 == 'Sim':
@@ -13,8 +13,7 @@ if resp1 == 'Sim':
         print('Muito bem', nome, ', agora que nos conhecemos, podemos começar.\n')
 else:
     print('Pois bem, vou me apresentar.')
-    print('Eu sou o Sistema Integrado de Diversão,')
-    print('criado especialmente para animá-lo, ou fazê-lo passar muuuuuita raiva hasjdhdsghsghjsd.')
+    print('Eu sou o Sistema Integrado de Diversão, criado especialmente para animá-lo, ou fazê-lo passar muuuuuita raiva. Risos.')
     print('Pronto, agora que você já me conhece, eu também quero te conhecer.')
     nome = input('Qual é seu nome? ')
     nome = nome.capitalize()
@@ -48,4 +47,4 @@ while resp2 == 1:
 
         resp2 = int(input('Deseja continuar? [1 para SIM; 2 para NÃO] '))
 
-print('Até uma próxima hehehe')
+print('Até uma próxima! risos')
