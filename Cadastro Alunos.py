@@ -21,3 +21,5 @@ while opcao!=3:
     elif opcao==2:
         gravar()
     opcao = int(input('Opção: '))
+
+#Rodar este programa na IDLE do Phyton
