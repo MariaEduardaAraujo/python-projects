@@ -1,2 +1,3 @@
-# Python-Projects
-Projetos em Python criados durante dois anos para as atividades do meu curso
+# Python-Projects 💻
+
+Projetos criados em Python durante dois anos como forma de atividades para o meu curso
