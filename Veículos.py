@@ -1,14 +1,14 @@
-print("1-Cadastrar veiculos")
-print("2-Exibir todos veiculos")
-print("3-Exibir o total de veiculos cadastrados")
-print("4-Exibir todos veiculos em ordem alfabetica")
-print("5-Localizar Carro")
-print("6-Remover carro")
-print("7-Verificar se existem duplicados")
-print("8-Exibir nome e a posicao dos duplicados")
-print("9-Exibir quantas letras tem o carro")
-print("10-Exibir vogais tem o carro")
-print("11-Sair")
+print(""" 1-Cadastrar veiculos 
+          2-Exibir todos veiculos
+          3-Exibir o total de veiculos cadastrados
+          4-Exibir todos veiculos em ordem alfabetica
+          5-Localizar Carro
+          6-Remover carro
+          7-Verificar se existem duplicados
+          8-Exibir nome e a posicao dos duplicados
+          9-Exibir quantas letras tem o nome do carro
+          10-Exibir quantidade vogais no nome do carro
+          11-Sair  """)
 
 opcao = int(input("Selecione a opção: "))
 veiculos = []
@@ -95,7 +95,3 @@ while opcao != 11 :
   elif opcao==10:    
     exibirQuantasVogais()  
   opcao = int(input("Selecione a opção: "))
-    
-
-
-
