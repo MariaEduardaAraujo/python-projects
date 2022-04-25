@@ -3,8 +3,7 @@ import time
 
 itens = ['Pedra', 'Papel', 'Tesoura', 'Lagarto', 'Spock']
 
-print('Olá, você está novamente no Sistema de Diversão, agora, um sitema novo')
-print('e melhorado, pronto para atendê-lo')
+print('Olá, você está novamente no Sistema de Diversão, agora, um sitema novo   e melhorado, pronto para atendê-lo')
 
 for i in range(1):
     time.sleep(1)
@@ -86,4 +85,6 @@ while perg2 == 1:
             print('Opção inválida')
             quit()  
         perg2 = int(input('Deseja prosseguir [1 para SIM; 2 para NÃO] '))
-print('Até mais!!')
+print('Até mais, foi um bom jogo!!')
+print('Placar final    Partidas jogadas    Partidas vencidas     Empates')
+print('XXXXXXXXXXXX         ',j,'                   ',v ,'              ', em)
