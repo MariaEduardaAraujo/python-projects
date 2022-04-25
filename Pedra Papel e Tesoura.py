@@ -6,8 +6,7 @@ j = 0
 v = 0
 em = 0
 
-print('Olá, você está novamente no Sistema de Diversão, agora, um sitema novo')
-print('e melhorado, pronto para atendê-lo')
+print('Olá, você está no Sistema de Diversão, agora, um sitema novo e melhorado, pronto para atendê-lo')
 
 for i in range(1):
     time.sleep(1)
@@ -64,3 +63,5 @@ while perg1 == 1:
 print('Até mais, foi um bom jogo!!')
 print('Placar final    Partidas jogadas    Partidas vencidas     Empates')
 print('XXXXXXXXXXXX         ',j,'                   ',v ,'              ', em)
+
+#Há um bug neste código e em certos momentos aparece a opção "INVÁLIDO", mesmo que tudo esteja correto
