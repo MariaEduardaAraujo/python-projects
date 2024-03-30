@@ -1,0 +1,13 @@
+#Solicite a idade de 5 alunos, e apresente a media das idades.
+#Sabendo que, para cada pergunta, mostre da seguinte maneira:
+#Exemplo: Aluno X, qual a sua idade?
+#Substituindo o X pela posição do aluno que está perguntando.
+#Importante considerar que, se for digitada uma idade negativa, o sistema deve desprezar.
+
+somaIdades = 0;
+
+for i in range(1, 6):
+  idade = int(input(f"Aluno {i}, qual a sua idade? "));
+  if (idade > 0):
+    somaIdades = somaIdades + idade;
+print(f"Média das idades = {somaIdades/i}");
