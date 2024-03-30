@@ -3,7 +3,7 @@ import time
 
 itens = ['Pedra', 'Papel', 'Tesoura', 'Lagarto', 'Spock']
 
-print('Olá, você está novamente no Sistema de Diversão, agora, um sitema novo   e melhorado, pronto para atendê-lo')
+print('Olá, você está novamente no Sistema de Diversão, agora, um sitema novo e melhorado, pronto para atendê-lo')
 
 for i in range(1):
     time.sleep(1)
