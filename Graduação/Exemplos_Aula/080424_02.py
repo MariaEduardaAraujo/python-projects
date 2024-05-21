@@ -13,8 +13,10 @@ print(nomeDaInstituicao, uf)
 
 #Funções da String
 print("Tamanho da String: ", len(nomeDaInstituicao)) #Retorna tamanho da String
-print("Posição da letra 'A' na String: ", nomeDaInstituicao.find("A")) #Retorna a posição da 
-#primeira ocorrência na String (Exibe "-1" se não encontrar)
+print("Número de ocorrências da letra 'A': ", nomeDaInstituicao.count("A")) 
+#Conta o número de ocorrências de uma determinada substring na String.
+print("Posição da letra 'A' na String: ", nomeDaInstituicao.find("A")) 
+#Retorna a posição da primeira ocorrência na String (Exibe "-1" se não encontrar)
 print("Posição da letra 'L' na String, a partir da posição 1: ", nomeDaInstituicao.find("L", 1))
 #Procura a partir de uma determinada posição
 print("Posição da letra 'L' na String, a partir da posição 1 com fim na posição 3: ", nomeDaInstituicao.find("L", 1, 4))
@@ -25,4 +27,3 @@ print("'IFAL' para 'IFAL Maceió': ",nomeDaInstituicao.replace("IFAL", "IFAL Mac
 #Muda a String para uma nova String
 print("Upper e Lower: ", nomeDaInstituicao.upper(), nomeDaInstituicao.lower())
 #Muda para maiúsculo (upper) e minúsculo (lower)
-print("Número de ocorrências da letra 'A': ", nomeDaInstituicao.count("A")) #Conta o número de ocorrências de uma determinada substring na String.
