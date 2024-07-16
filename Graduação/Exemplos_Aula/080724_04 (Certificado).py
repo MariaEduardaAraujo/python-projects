@@ -8,15 +8,19 @@ def menu():
 
 evento = []
 eventoConvidados = []
+presenca = []
 
 while (True):
+    print()
     menu()
+    print()
     opcao1 = int(input("Qual opção você deseja? "))
     
     if (opcao1 == 1):
+        print()
         print("Módulo de Criação de Eventos")
         print("Digite os seguintes dados: ")
-        
+
         data = input("Digite a data: [DD/MM/AA] ")
         titulo = input("Digite o título do evento: ")
         local = input("Digite o local do evento: ")
@@ -29,76 +33,105 @@ while (True):
                 
         if not eventoExistente:
             evento.append((data, titulo, local, capacidade))
+            print()
             print(f"O evento {titulo} a ser realizado no local {local} no dia {data} foi cadastrado com sucesso.")
             continue
         else:
+            print()
             print("O seu evento não foi criado. Tente novamente.")
             continue
         
     elif (opcao1 == 2):
-        print("Módulo de Criação de Eventos")
-        print("Eventos cadastrados: ")
-        for ev in evento:
-           print(f"- {ev[1]}")
+        while(True):
+            print()
+            print("Módulo de Criação de Eventos")
+            print("Eventos cadastrados: ")
+            for ev in evento:
+                print(f"- {ev[1]}")
 
-        opcao2 = input("Em qual evento você deseja adicionar um convidado: ")
+                addConvidado = input("Em qual evento você deseja adicionar um convidado: ")
 
-        if (opcao2 in ev):
-            nome = input("Qual é o nome do participante? ")
+                if (addConvidado in ev):
+                    nome = input("Qual é o nome do participante? ")
 
-            if (nome == ""):
-                print("É necessário digitar um nome")
+                    if (nome == ""):
+                        print()
+                        print("É necessário digitar um nome")
+                        continue
+                    else:
+                        if(nome in eventoConvidados):
+                            print()
+                            print("Não é possível adicionar pessoas com o mesmo nome")
+                            continue
+                        else:
+                            eventoConvidados.append(nome)
+                            print()
+                            print("Pessoa adicionada com sucesso!")
+
+                else:
+                    print("Informação Inválida!")
+                    continue
+            
+            print()
+            addConvidado2 = input("Deseja adicionar mais uma pessoa ao evento? [sim/nao] ").upper()
+            if (addConvidado2 == "SIM"):
                 continue
             else:
-                if(nome in eventoConvidados):
-                    print("Não é possível adicionar pessoas com o mesmo nome")
-                    continue
-                else:
-                    eventoConvidados.append(nome)
-                    print("Pessoa adicionada com sucesso!")
-
-        else:
-            print("Informação Inválida!")
-            continue
-
-        opcao3 = input("Deseja adicionar mais uma pessoa ao evento? [sim/nao] ").upper()
-        if (opcao3 == "SIM"):
-            continue #Não Func
-        else:
-            exit
+                break
 
     elif (opcao1 == 3):
+        while(True):
+            print()
+            print("Módulo de Registro de Presença")
+            print("Eventos cadastrados: ")
+            for ev in evento:
+                print(f"- {ev[1]}")
+
+                presenca = input("Em qual evento você deseja registrar presenças: ")
+
+                if (presenca in ev):
+                    nome = input("Qual é o nome do participante? ")
+                    if (nome == ""):
+                        print()
+                        print("É necessário digitar um nome")
+                        continue
+                    else:
+                        if (nome in eventoConvidados):
+                            print()
+                            print("Presença registrada com sucesso")
+                        else:
+                            print()
+                            print("Presença não confirmada")
+                            exit
+                else:
+                    print("Informação Inválida!")
+                    continue
+            
+            print()
+            confPresenca = input("Deseja confirmar mais uma presença? [sim/nao] ").upper()
+            if (confPresenca == "SIM"):
+                continue
+            else:
+                break
+
+    elif (opcao1 == 4):
+        print()
         print("Módulo de Registro de Presença")
         print("Eventos cadastrados: ")
         for ev in evento:
-           print(f"- {ev[1]}")
+            print(f"- {ev[1]}")
 
-        opcao4 = input("Em qual evento você deseja registrar presenças: ")
+            certEvento = input("Em qual evento você deseja emitir certificados: ")
 
-        if (opcao2 in ev):
-            nome = input("Qual é o nome do participante? ")
-            if (nome == ""):
-                print("É necessário digitar um nome")
-                continue
+            if (certEvento in ev):
+                for c in eventoConvidados:
+                    print(f"Certifico que {c} participou do {ev[1]} no dia {ev[0]}, realizado no {ev[2]}.")
+                break
             else:
-                if (nome in eventoConvidados):
-                    print("Presença registrada com sucesso")
-                else:
-                    print("Presença não confirmada")
-                    exit
-        else:
-            print("Informação Inválida!")
-            continue
-        opcao5 = input("Deseja confirmar mais uma presença? [sim/nao] ").upper()
-        if (opcao3 == "SIM"):
-            quit #Não Func
-        else:
-            exit
-
-    elif (opcao1 == 4):
-        print(":)")
+                print("O evento pesquisado não foi encontrado. Verifique novamente.")
 
     elif (opcao1 == 5):
+        print("Saindo...")
         break
     
     else:
