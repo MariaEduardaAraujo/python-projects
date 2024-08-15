@@ -15,10 +15,6 @@ O jogo escolhe aleatoriamente um país da lista e você deve tentar adivinhar o 
 
 Se você tiver sugestões ou encontrar problemas, sinta-se à vontade para abrir uma issue ou contribuir com um pull request.
 
-## Licença
-
-Este projeto está licenciado sob a Licença MIT.
-
 ## Contato 📧📞
 
 Para perguntas ou sugestões, entre em contato com [mariaeduardadearaujosilva@outlook.com](mailto:mariaeduardadearaujosilva@outlook.com).
