@@ -1,4 +1,4 @@
-# Jogo da Forca dos Países nas Olimpíadas 🥇✨
+# Jogo da Forca dos Países nas Olimpíadas V1 🥇✨
 
 Bem-vindo ao "Jogo da Forca dos Países nas Olimpíadas"! Aproveitando o clima de Olimpíadas e Paralimpíadas, este é um simples jogo da forca onde o objetivo é adivinhar o nome de um dos países no TOP 20 do quadro de medalhas 2024. Você terá 6* chances para acertar a palavra secreta antes que a forca esteja completa.
 
