@@ -13,10 +13,7 @@ def salva():
     if nome:
         listbox.insert(END, nome + "," + cpf)
         
-        t1.delete(0, END)
-        t2.delete(0, END)
-        t3.delete(0, END)
-        t4.delete(0, END)
+        deleta()
 
         linha = f"{nome}, {endereco}, {cpf}, {idade}\n"
         #listaDados.append((nome, endereco, cpf, idade))
