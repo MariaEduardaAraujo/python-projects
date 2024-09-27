@@ -13,7 +13,7 @@ def salva():
     if nome:
         listbox.insert(END, nome + "," + cpf)
         
-        deleta()
+        limpa()
 
         linha = f"{nome}, {endereco}, {cpf}, {idade}\n"
         #listaDados.append((nome, endereco, cpf, idade))
@@ -27,7 +27,7 @@ def insere():
         dados = linha.split(",")
         listbox.insert(END, dados[0] + "," + dados[2]) 
         
-def deleta():
+def limpa():
     t1.delete(0, END)
     t2.delete(0, END)
     t3.delete(0, END)
@@ -44,11 +44,14 @@ def seleciona(event):
         for d in arquivo:
             da = d.split(",")
             if (da[0] == ls[0]):
-                deleta()
+                limpa()
                 t1.insert(END, da[0])
                 t2.insert(END, da[1])
                 t3.insert(END, da[2])
                 t4.insert(END, da[3])
+
+def deleta():
+    limpa()
 
 win = Tk()
 win.title('Meu primeiro formulário')
