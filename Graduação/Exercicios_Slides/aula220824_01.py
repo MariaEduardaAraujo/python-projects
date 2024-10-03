@@ -145,10 +145,10 @@ sexoProcurado = input("Digite o sexo que você quer retornar: [F/M] ").upper()
 buscaPeloSexo(sexoProcurado)'''
 
 '''Questão Extra
-''No mesmo arquivo, crie uma função que recebe como parâmetro um nome,
+No mesmo arquivo, crie uma função que recebe como parâmetro um nome,
 ou parte dele, e RETORNA uma lista com todos os cadastros que tenham o
 nome igual ao valor passado como parâmetro ou possuam parte do nome com
-o valor passado como parâmetro ''
+o valor passado como parâmetro '''
 arquivo = open("dados.txt", "a", encoding="UTF-8")
 
 def cadastro():
@@ -188,8 +188,8 @@ def buscaPeloSexo(sexoProcurado):
                 print(f"Usuários do sexo Feminino: {s}")
             elif(s[2] == "M"):
                 print(f"Usuários do sexo Masculino: {s}")
-        ''else:
-            print("Sexo não localizado")''
+        '''else:
+            print("Sexo não localizado")'''
 
 def buscaPeloNome(nomeProcurado):
     arquivo = open("dados.txt", "r", encoding="UTF-8")
@@ -198,12 +198,12 @@ def buscaPeloNome(nomeProcurado):
         p = "".join(n[0])
         if (nomeProcurado in p):
             print(f"Possíveis pessoas que você está procurando: {n}")
-        ''else:
-            print("Pessoa não localizada")''
+        '''else:
+            print("Pessoa não localizada")'''
 cadastro()
 leitura()
 
 sexoProcurado = input("Digite o sexo que você quer retornar: [F/M] ").upper()
 buscaPeloSexo(sexoProcurado)
 nomeProcurado = input("Digite o nome, ou parte dele, que você quer localizar: ")
-buscaPeloNome(nomeProcurado)'''
+buscaPeloNome(nomeProcurado)
