@@ -51,7 +51,20 @@ def seleciona(event):
                 t4.insert(END, da[3])
 
 def deleta():
-    limpa()
+    indice = listbox.curselection() 
+
+    if indice:
+        linhaSelecionada = listbox.get(indice).split(",")[0]
+
+        with open("dados.txt", "r", encoding="UTF-8") as arquivo:
+            linhas = arquivo.readlines()
+
+        with open("dados.txt", "w", encoding="UTF-8") as arquivo:
+            for linha in linhas:
+                if not linha.startswith(linhaSelecionada):
+                    arquivo.write(linha)
+
+        listbox.delete(indice)
 
 win = Tk()
 win.title('Meu primeiro formulário')

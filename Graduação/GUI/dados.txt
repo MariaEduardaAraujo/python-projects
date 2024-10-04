@@ -1,3 +1,0 @@
-pessoa Um, rua A, 1, 23
-pessoa Dois, rua B, 2, 21
-pessoa Tres, rua C, 3, 19
