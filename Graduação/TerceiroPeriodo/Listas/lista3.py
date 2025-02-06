@@ -5,7 +5,18 @@ Crie suas próprias funções, não utilize funções preexistentes da linguagem
 
 '''1. Uma palavra é palíndroma se ela não se altera quando lida da direita para esquerda. Por exemplo, raiar é palíndroma.
 Escreva um programa que verifique se uma palavra dada é palíndroma.
-https://www.thehuxley.com/problem/1008?locale=pt_BR'''
+https://www.thehuxley.com/problem/1008?locale=pt_BR
+
+def verificar_palindromo(palavra):
+    palavraInvertida = palavra[::-1]
+    
+    if (palavra == palavraInvertida):
+        print("A palavra é um palíndromo.")
+    else:
+        print("A palavra não é um palíndromo.")
+
+palavra = input("Digite uma palavra: ")
+verificar_palindromo(palavra)'''
 
 '''2. Um dos recursos disponibilizados pelos editores de texto mais modernos é a determinação do número de palavras de um
 texto. Escreva um programa que determine o número de palavras de um texto dado.
@@ -13,11 +24,29 @@ https://www.thehuxley.com/problem/1008?locale=pt_BR - Contar palavras'''
 
 '''3. Escreva uma função que recebe uma string e imprime somente a última palavra da mesma. Exemplo: Se a string digitada
 for "José da Silva", deverá ser impresso na tela a substring "Silva".
-https://www.thehuxley.com/problem/248?locale=pt_BR - Última palavra de uma frase'''
+https://www.thehuxley.com/problem/248?locale=pt_BR - Última palavra de uma frase
 
-'''4. As companhias de transportes aéreos costumam representar os nomes dos passageiros no formato último
+nomeCompleto = input("Digite seu nome completo: ")
+
+separaNome = nomeCompleto.split(" ")
+ultimoSobrenome = separaNome[-1]
+
+print(ultimoSobrenome)
+
+4. As companhias de transportes aéreos costumam representar os nomes dos passageiros no formato último
 sobrenome/nome. Por exemplo, o passageiro Carlos Drumond de Andrade seria indicado por Andrade/Carlos. Escreva um
-programa que lê um nome e o escreve no formato acima.'''
+programa que lê um nome e o escreve no formato acima.
+
+nome = input("Digite seu nome: ")
+sobrenome = input("Digite seu sobrenome: ")
+
+separaNome = nome.split(" ")
+separaSobrenome = sobrenome.split(" ")
+
+primeiroNome = separaNome[0]
+ultimoSobrenome = separaSobrenome[-1]
+
+print(ultimoSobrenome+"/"+primeiroNome)'''
 
 '''5. As normas para a exibição da bibliografia de um artigo científico, de uma monografia, de um livro texto, etc., exigem que o
 nome do autor seja escrito no formato último sobrenome, sequência das primeiras letras do nome e dos demais
@@ -32,10 +61,21 @@ def separa(palavra):
         print(letra.capitalize(), end=" ")
 
 texto = input("Digite uma palavra para ser separada por espaços: ")
-separa(texto)'''
+separa(texto)
 
-'''7. Escreva uma função que gere logins para usuários de um sistema de computação baseado na seguinte regra: o login é
-composto pelas letras iniciais do nome do usuário.'''
+7. Escreva uma função que gere logins para usuários de um sistema de computação baseado na seguinte regra: o login é
+composto pelas letras iniciais do nome do usuário.
+
+def login(nomeUsuario):
+    separa = (nomeUsuario.lower()).split(" ")
+    userName = ''
+
+    for nome in separa:
+        userName += nome[0]
+    print(f"Seu login é: {userName}")
+
+nomeUsuario = input("Digite seu nome: ")
+login(nomeUsuario)'''
 
 '''8. Os editores de texto possuem um recurso que permite o usuário substituir uma palavra de um texto por outra palavra.
 Escreva um programa que realize esta ação numa frase dada.'''
