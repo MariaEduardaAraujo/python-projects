@@ -155,12 +155,21 @@ def soma_numeros(numero):
     return soma
 
 num = int(input("Digite um número: "))
-print(soma_numeros(num))'''
+print(soma_numeros(num))
 
-'''12. Faça uma função eh_primo(numero) que recebe como parâmetro um número inteiro e retorna True se ele é um número
+#12. Faça uma função eh_primo(numero) que recebe como parâmetro um número inteiro e retorna True se ele é um número
 primo e False caso contrário. Um número é primo quando ele é divisível somente por um e por ele mesmo.
 
-13. A sequência de Fibonacci é uma sequência de números inteiros, começando normalmente por 0 e 1, na qual, cada termo
+def eh_primo(numero):
+    for i in range(2, numero // 2 + 1):
+        if (numero % i == 0):
+            return False
+    return True
+    
+num = int(input("Digite um número: "))
+print(eh_primo(num))'''
+
+'''13. A sequência de Fibonacci é uma sequência de números inteiros, começando normalmente por 0 e 1, na qual, cada termo
 subsequente corresponde a soma dos dois anteriores. Faça uma função Fibonacci(termo) que dado um número N
 representando o n-ésimo termo da sequencia de Fibonacci, retorna a soma desses termos. Exemplo: Fibonacci(7) = 20 ,
 pois os 7 primeiros termos da sequencia de Fibonacci são “0,1, 1, 2, 3, 5, 8” e sua soma é 20.'''
