@@ -25,7 +25,14 @@ sobrenomes, seguidas de ponto final. Por exemplo, Antônio Carlos Jobim seria re
 programa que receba um nome e o escreva no formato de bibliografia.'''
 
 '''6. É muito comum que os títulos de documentos como avisos, declarações, atestados, etc., apareçam em letras maiúsculas
-separadas por um espaço em branco. Escreva uma função que receba uma palavra e a retorne no formato acima.'''
+separadas por um espaço em branco. Escreva uma função que receba uma palavra e a retorne no formato acima.
+
+def separa(palavra):
+    for letra in palavra:
+        print(letra.capitalize(), end=" ")
+
+texto = input("Digite uma palavra para ser separada por espaços: ")
+separa(texto)'''
 
 '''7. Escreva uma função que gere logins para usuários de um sistema de computação baseado na seguinte regra: o login é
 composto pelas letras iniciais do nome do usuário.'''

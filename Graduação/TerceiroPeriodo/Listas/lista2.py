@@ -138,13 +138,56 @@ def eh_bissexto(ano):
         return False
     
 anoBis = int(input("Digite um ano: "))
-print(eh_bissexto(anoBis))'''
+print(eh_bissexto(anoBis))
 
-'''10. Faça uma função eh_data_valida(dia, mes, ano) que recebe como parâmetro três valores, representando dia, mês e ano.
+#10. Faça uma função eh_data_valida(dia, mes, ano) que recebe como parâmetro três valores, representando dia, mês e ano.
 Essa função deve retornar True se os valores formarem uma data válida, e False caso contrário
-https://www.thehuxley.com/problem/1113?locale=pt_BR'''
+https://www.thehuxley.com/problem/1113?locale=pt_BR
 
-'''#11. Faça uma função soma_numeros(numero) que recebe como parâmetro um número N, calcula a soma de todos os números
+def eh_data_valida (d,m,a):
+    if (a >= 1900 and a <= 2100):
+        if (a % 400 == 0 or (a % 4 == 0 and a % 100 != 0)):
+            if (m == 2):
+                if (d <= 29):
+                    return True
+                else:
+                    return False
+            else:
+                if (m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12):
+                    if (d <= 31):
+                        return True
+                    else:
+                        return False
+                elif (m == 4 or m == 6 or m == 9 or m == 11):
+                    if (d <= 30):
+                        return True
+                    else:
+                        return False
+                else:
+                        return False
+        else:
+            if (m == 1 or m == 3 or m == 5 or m == 7 or m == 8 or m == 10 or m == 12):
+                if (d <= 31):
+                    return True
+                else:
+                    return False
+            elif (m == 4 or m == 6 or m == 9 or m == 11):
+                if (d <= 30):
+                    return True
+                else:
+                    return False
+            else:
+                    return False
+    else:
+        return False
+
+dia = int(input("Digite o dia: "))
+mes = int(input("Digite o número do mês: "))
+ano = int(input("Digite o ano: "))
+
+print(eh_data_valida(dia, mes, ano))
+
+#11. Faça uma função soma_numeros(numero) que recebe como parâmetro um número N, calcula a soma de todos os números
 de 1 até ele e retorna o valor da soma. Exemplo: soma_numeros(7) = 28 , pois 1+2+3+4+5+6+7=28.
 
 def soma_numeros(numero):
