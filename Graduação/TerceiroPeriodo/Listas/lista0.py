@@ -30,16 +30,24 @@ fat = 1
 while(numero >= 1):
     fat *= numero
     numero -=1
-print(fat)'''
+print(fat)
 
-'''#4. Imprima a seguinte tabela usando fors encadeados:
+#4. Imprima a seguinte tabela usando fors encadeados: (Chat)
 1
 2 4
 3 6 9
 4 8 12 16
-n n*2 n*3 .... n*n'''
+n n*2 n*3 .... n*n
 
-'''#5. Escreva uma função em que, dada uma variável x com algum valor inteiro, temos um novo x de acordo com a seguinte
+n = int(input("Digite um número: "))
+
+for i in range(1, n+1):
+    for j in range(1, i+1):
+        print(i * j, end=" ")
+    print() 
+
+
+#5. Escreva uma função em que, dada uma variável x com algum valor inteiro, temos um novo x de acordo com a seguinte
 regra:
 Se x é par, x = x / 2;
 Se x é impar, x = 3 * x + 1;
