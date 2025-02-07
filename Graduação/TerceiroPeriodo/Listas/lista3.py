@@ -16,13 +16,22 @@ def verificar_palindromo(palavra):
         print("A palavra não é um palíndromo.")
 
 palavra = input("Digite uma palavra: ")
-verificar_palindromo(palavra)'''
+verificar_palindromo(palavra)
 
-'''2. Um dos recursos disponibilizados pelos editores de texto mais modernos é a determinação do número de palavras de um
+#2. Um dos recursos disponibilizados pelos editores de texto mais modernos é a determinação do número de palavras de um
 texto. Escreva um programa que determine o número de palavras de um texto dado.
-https://www.thehuxley.com/problem/1008?locale=pt_BR - Contar palavras'''
+https://www.thehuxley.com/problem/1008?locale=pt_BR - Contar palavras
 
-'''#3. Escreva uma função que recebe uma string e imprime somente a última palavra da mesma. Exemplo: Se a string digitada
+texto = input("Digite um texto aqui: ")
+separa = texto.split(" ")
+palavras = 0
+
+for p in separa:
+    palavras += 1
+
+print(f"O seu texto tem {palavras} palavras")
+
+#3. Escreva uma função que recebe uma string e imprime somente a última palavra da mesma. Exemplo: Se a string digitada
 for "José da Silva", deverá ser impresso na tela a substring "Silva".
 https://www.thehuxley.com/problem/248?locale=pt_BR - Última palavra de uma frase
 
@@ -96,3 +105,4 @@ login(nomeUsuario)'''
 
 '''8. Os editores de texto possuem um recurso que permite o usuário substituir uma palavra de um texto por outra palavra.
 Escreva um programa que realize esta ação numa frase dada.'''
+
