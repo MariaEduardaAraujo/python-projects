@@ -101,8 +101,22 @@ def login(nomeUsuario):
     print(f"Seu login é: {userName}")
 
 nomeUsuario = input("Digite seu nome: ")
-login(nomeUsuario)'''
+login(nomeUsuario)
 
-'''8. Os editores de texto possuem um recurso que permite o usuário substituir uma palavra de um texto por outra palavra.
-Escreva um programa que realize esta ação numa frase dada.'''
+#8. Os editores de texto possuem um recurso que permite o usuário substituir uma palavra de um texto por outra palavra.
+Escreva um programa que realize esta ação numa frase dada.
 
+def troca (texto, palavraTrocada, palavraTrocar):
+    textoSep = texto.split(" ")
+    if (palavraTrocar in textoSep):
+        indice = textoSep.index(palavraTrocar)
+        textoSep.insert(indice, palavraTrocada)
+        textoSep.remove(palavraTrocar)
+        print("Seu novo texto é: ", " ".join(textoSep)) # Join une as palavras com um espaço entre elas
+    else:
+        print(f"A palavra {palavraTrocar} não está no texto!")
+
+textoDig = input("Escreva o seu texto aqui: ")
+palavraAnt = input("Digite a palavra que você quer trocar: ")
+palavraNova = input("Digite a sua nova palavra: ")
+troca(textoDig, palavraNova, palavraAnt)'''
