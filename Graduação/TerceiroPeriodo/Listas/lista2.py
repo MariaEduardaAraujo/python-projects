@@ -212,7 +212,7 @@ def eh_primo(numero):
 num = int(input("Digite um número: "))
 print(eh_primo(num))
 
-13. A sequência de Fibonacci é uma sequência de números inteiros, começando normalmente por 0 e 1, na qual, cada termo
+#13. A sequência de Fibonacci é uma sequência de números inteiros, começando normalmente por 0 e 1, na qual, cada termo
 subsequente corresponde a soma dos dois anteriores. Faça uma função Fibonacci(termo) que dado um número N
 representando o n-ésimo termo da sequencia de Fibonacci, retorna a soma desses termos. Exemplo: Fibonacci(7) = 20 ,
 pois os 7 primeiros termos da sequencia de Fibonacci são “0,1, 1, 2, 3, 5, 8” e sua soma é 20.
