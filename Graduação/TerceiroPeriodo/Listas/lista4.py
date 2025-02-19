@@ -75,11 +75,22 @@ def fatDuplo(n):
         return n * fatDuplo(n-2)
 
 num = int(input("Digite um número ímpar: "))
-print(f"Fatorial Duplo: {fatDuplo(num)}")'''
+print(f"Fatorial Duplo: {fatDuplo(num)}")
 
-'''8. Escreva uma função recursiva que informa se uma String é palíndroma ou não. Um palíndromo é uma string que é lida da
+#8. Escreva uma função recursiva que informa se uma String é palíndroma ou não. Um palíndromo é uma string que é lida da
 mesma maneira da esquerda para a direita e da direita para a esquerda. Alguns exemplos de palíndromo são "E até o
-papa poeta é" (se os espaços, pontuação e acentos forem ignorados).'''
+papa poeta é" (se os espaços, pontuação e acentos forem ignorados).
+
+def palindromo(p):
+    if (len(p) <= 1):
+        return True
+    elif (p[0] != p[-1]):
+        return False
+    return palindromo(p[1:-1])
+    
+palavra = input("Digite uma frase sem acentos e pontuações: ").split()
+junta = "".join(palavra)
+print(palindromo(junta))'''
 
 '''9. O MDC de dois números inteiros é o maior número inteiro que divide ambos sem deixar resto. O MDC pode ser calculado
 através do algoritmo de Euclides. Abaixo uma função iterativa que calcula o MDC. Reescreva a função abaixo de forma
