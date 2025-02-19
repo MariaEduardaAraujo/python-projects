@@ -9,9 +9,19 @@ def fatorial(n):
         return n * fatorial(n-1)
 
 fat = int(input("Digite o número para saber o seu fatorial: "))
-print(fatorial(fat))'''
+print(fatorial(fat))
 
-'''2. Escreva uma função recursiva que permita inverter uma palavra N. "Python" -->> "nohtyP"'''
+#2. Escreva uma função recursiva que permita inverter uma palavra N. "Python" -->> "nohtyP"
+
+def inverte (p):
+    if (len(p) == 0):
+        return " "
+    else:
+        return p[-1] + inverte(p[:-1])
+
+palavra = input("Digite uma palavra: ")
+print(inverte(palavra))'''
+
 '''3. Escreva uma função recursiva que determine quantas vezes uma letra K ocorre em uma Palavra P. Por exemplo, a letra 'u'
 ocorre 2 vezes em "estrutura"'''
 
@@ -50,11 +60,22 @@ def fibonacci(n):
 
 fib = int(input("Digite um número para saber o seu valor correspondente na Sequência de Fibonacci: "))
 result = fibonacci(fib-1)
-print(f"O {fib}° termo da Sequência de Fibonacci é {result}")'''
+print(f"O {fib}° termo da Sequência de Fibonacci é {result}")
 
-'''7. Escreva uma função recursiva que receba um número inteiro positivo impar N e retorne o fatorial duplo desse número. O
+#7. Escreva uma função recursiva que receba um número inteiro positivo impar N e retorne o fatorial duplo desse número. O
 fatorial duplo é definido como o produto de todos os números naturais ímpares de 1 até algum número natural ímpar N.
-Assim, o fatorial duplo de 5 é 5!! == 1 * 3 * 5 = 15'''
+Assim, o fatorial duplo de 5 é 5!! == 1 * 3 * 5 = 15
+
+def fatDuplo(n):
+    if (n % 2 == 0):
+        return "Número par"
+    if (n == 1):
+        return n
+    else:
+        return n * fatDuplo(n-2)
+
+num = int(input("Digite um número ímpar: "))
+print(f"Fatorial Duplo: {fatDuplo(num)}")'''
 
 '''8. Escreva uma função recursiva que informa se uma String é palíndroma ou não. Um palíndromo é uma string que é lida da
 mesma maneira da esquerda para a direita e da direita para a esquerda. Alguns exemplos de palíndromo são "E até o
