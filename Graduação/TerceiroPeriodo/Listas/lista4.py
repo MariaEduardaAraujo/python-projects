@@ -20,12 +20,24 @@ def inverte (p):
         return p[-1] + inverte(p[:-1])
 
 palavra = input("Digite uma palavra: ")
-print(inverte(palavra))'''
+print(inverte(palavra))
 
-'''3. Escreva uma função recursiva que determine quantas vezes uma letra K ocorre em uma Palavra P. Por exemplo, a letra 'u'
-ocorre 2 vezes em "estrutura"'''
+3. Escreva uma função recursiva que determine quantas vezes uma letra K ocorre em uma Palavra P. Por exemplo, a letra 'u'
+ocorre 2 vezes em "estrutura"
 
-'''#4. Escreva uma função recursiva que receba um número inteiro positivo N e imprima todos os números naturais de 0 até N em
+def conta (p, l):
+    if (p == ""):
+        return 0
+    else:
+        if (l == p[0]):
+            return 1 + conta(p[1:], l)
+        return conta(p[1:], l)
+
+palavra = input("Digite uma palavra: ")
+letra = input("Digite uma letra: ")
+print(conta(palavra, letra))
+
+#4. Escreva uma função recursiva que receba um número inteiro positivo N e imprima todos os números naturais de 0 até N em
 ordem crescente.
 
 def numero(n):
