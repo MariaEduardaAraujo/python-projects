@@ -63,8 +63,14 @@ def teste_remover_tarefa():
     lista.remover_tarefa(5)
     lista.remover_tarefa(9)
 
+def teste_contem():
+    print("\nContem")
+    t1 = Tarefa("Ler um livro", "Baixa")
+    print(lista.contem(t1))
+
 teste_obter_tarefa()
 teste_remover_tarefa()
+teste_contem()
 
 def teste_tamanho():
     print("\nTamanho")

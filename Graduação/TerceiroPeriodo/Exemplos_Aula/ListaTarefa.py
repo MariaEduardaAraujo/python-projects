@@ -37,7 +37,9 @@ class ListaTarefas:
         print("Tarefa removida!")
 
     def contem(self, tarefa):
-        pass
-
+        for t in range(self.tamanho):
+            if self.tarefas[t].descricao == tarefa.descricao: return True
+        return False
+    
     def tamanho(self):
         return self.tamanho
