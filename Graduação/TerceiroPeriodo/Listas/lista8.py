@@ -37,7 +37,39 @@ valor = 8
 print(busca_bin_recursiva(lista, valor))'''
 
 #Questão 12
+'''def pesquisa_binaria(lista, valor):
+    qtd = []
+    inicio = 0
+    fim = len(lista) - 1
+    
+    while inicio <= fim:
+        meio = (inicio + fim) // 2
+        if lista[meio] == valor:
+            qtd.append(meio)
+            
+            esquerda = meio - 1
+            while esquerda >= 0 and lista[esquerda] == valor:
+                qtd.append(esquerda)
+                esquerda -= 1
 
+            direita = meio + 1
+            while direita < len(lista) and lista[direita] == valor:
+                qtd.append(direita)
+                direita += 1
+
+            return sorted(qtd)
+
+        else:
+            if lista[meio] < valor: 
+                inicio = meio + 1
+            else: 
+                fim = meio - 1
+                
+    return -1
+    
+lista = [1, 2, 3, 4, 4, 4, 5, 5, 6, 6, 7, 8, 8, 8, 9, 9,]
+valor = 8
+print(pesquisa_binaria(lista, valor))'''
 
 #Questão 13
 '''def busca_bin_recursiva(lista, valor, inicio=0, fim=None):
