@@ -48,7 +48,7 @@ class HashTable:
                 valor = self.valores[posicao]
                 return valor
             else:
-                posicao = self.rehash(slot_inicial, len(self.slots))
+                posicao = self.rehash(posicao, len(self.slots))
                 if posicao == slot_inicial:
                     break
 
