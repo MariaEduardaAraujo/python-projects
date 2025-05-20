@@ -43,7 +43,7 @@ class HashTable:
         valor = None
         posicao = slot_inicial
 
-        while self.slots[posicao] != None:
+        while True:
             if self.slots[posicao] == chave:
                 valor = self.valores[posicao]
                 return valor
